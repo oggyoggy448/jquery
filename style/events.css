@@ -1,0 +1,9 @@
+#sect{
+    height: 100px;
+    background-color: green;
+    color: white;
+    text-align: center;
+    padding-top: 5%;
+    font-size: 2em;
+    text-transform: uppercase;
+}

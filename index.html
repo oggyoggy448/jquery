@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+
+    <!--Quick way add content using jquery.-->
+    <header class="header">
+        <h1 id="heading">First Page</h1>
+        <p id="text"></p>
+    </header>
+    <hr>
+    <article class="selectors">
+        <h2>Element selectors <h5 style="color: red"> below text are selected using jquery differnt selectors</h5></h2>
+        <p id="p1">
+        </p>
+        <p class="extra_text">
+            extra detail
+        </p>
+        <code id="code1" class="code2">
+            2+2 != 10
+        </code>
+        <sup>
+            Data 
+        </sup>
+        <p>
+            $("div.classname");
+            $("div#id.classname");
+            $("*");
+        </p>
+        <p>
+            this kind of pattern can use too.
+            $("h2:not('.class')");
+        </p>
+
+    </article>
+    <hr>
+
+    <article>
+        <div id="p_lang">
+            
+        </div>
+        <div>
+            <p class="p_lang_text">is a language to learn.</p>
+            <p class="p_lang_text01">is a language to learn.</p>
+        </div>
+    </article>
+    <hr>
+
+    <article id="event">
+        <h2>events</h2>
+        <p> move the mouse | click the mouse | leave the area </p>
+        
+    </article>
+    <div>
+        <button type="button" id="animation">See animation</button>
+        <div id="anim_area"></div>
+    </div>
+
+    <div>
+        <p id="using_ajax"></p>
+        
+        <button type="button" id="get_data">Get Data</button>
+        <button type="button" id="mix_data">Get mix Data</button>
+    </div>    
+    <script src="js/lib/jquery.js"></script>
+    <script src="js/cus_jquery.js"></script>
+</body>
+</html>
