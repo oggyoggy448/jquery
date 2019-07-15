@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div:nth-child(1){
+            height: 200px;
+            background-color: green;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div id="box">
+        There is some data here
+    </div>
+    <div>
+        <button id="show">show box</button>
+        <button id="hide">hide box</button>
+        <button id="toggle">toggle box</button>
+        <button id="fade_out">fade out box</button>
+        <button id="fade_in">fadein box</button>
+        <button id="fade_to">fade to box</button>
+        <button id="combination_anim">combination animation box</button> 
+        
+        <button id="slide_up">slide up box</button>
+        <button id="slide_down">slide down box</button>
+        <button id="slide_toggle">slide toggle box</button>
+
+        <button id="anim_fun" onclick="anim_fun()">custom animation</button>
+    </div>
+
+    <script src="js/lib/jquery.js"></script>
+    <script src="js/anim.js"></script>
+</body>
+</html>

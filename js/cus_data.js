@@ -5,7 +5,7 @@ $("document").ready(function(){
 
     // document.getElementById("show").onClick(show_button);
     // $("#show").on("change",show_button(evt.target.checked));
-    // document.getElementById("#show").addEventListener("change",
+    // document.getElementById("show").addEventListener("change",
     //         function(evt){show_button(evt.target.checked);});
     
 

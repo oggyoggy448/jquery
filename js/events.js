@@ -1,6 +1,56 @@
 // console.log($("section").html());
 $("document").ready(function(){
+
+    $("#sect").on("mouseover mouseleave",mouseover1);
+    function mouseover1(){
+        console.log("mouse is moving");
+        // $("#sect").toggleClass("body_color_change");
+        $("#sect").css({'background-color':"blue"});
+    }
+    $("#turnoff_evt").on("click",function(){
+        // console.log("it's working");
+        $("#sect").off("mouseover mouseleave",mouseover1);
+        $("#sect").css("background-color","green");
+
+    });
+    $("#dbl_click").dblclick(function(){
+        console.log("double clicked worked");
+    });
+
+    $(window).resize(function(){
+        $("#sect").html("windows is resizing");
+    });
+
+    $("#hover").hover(function(){
+        console.log("hovering is working fine");
+    });
+
+    $("#one_time_evt").one("click",function(){
+        console.log("this event will work once");
+    });
+
+
+    $("#type_char").on("keypress",function(evt){
+        var code = String.fromCharCode(evt.charCode);
+        $("#type_char_text").text(code);
+    });
     // $("section").text("this isn't a blank section now");
+    $("#evt_info").click({name:"event1"},function(evt){
+        // console.log("this event is working") ;
+        console.log("target:"+evt.target.id);
+        console.log("metaKey:"+evt.metaKey);
+        console.log("type:"+evt.type);
+        console.log("which:"+evt.which);
+
+        console.log("pageX:"+evt.pageX);
+        console.log("pageY:"+evt.pageY);
+        console.log("clientX"+evt.clientX);
+        console.log("clientY:",evt.clientY);
+        console.log("data:",evt.data.name);
+    });
+
+
+
 
     $("#c_content").click(function(){
         $("#sect").html("Content has been changed");
@@ -38,6 +88,7 @@ $("document").ready(function(){
     $("#after").click(function(){
         $("#sect").after("**************************************");
     });
+
 
     $("#i_before").click(function(){
         $("<h1> el before </h1>").insertBefore("#p2");
@@ -89,9 +140,5 @@ $("document").ready(function(){
             return this.outerHTML;
         }
     }
-
-
-
-
-
 });
+
