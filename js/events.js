@@ -2,6 +2,10 @@
 $("document").ready(function(){
 
     $("#sect").on("mouseover mouseleave",mouseover1);
+    // mouseover event execute when a user moves his mouse cursor inside the element content
+    // mouseleave event execuate when a user moves his mouse cursor out of element of content
+    // on function turns on the event written inside its parameters
+
     function mouseover1(){
         console.log("mouse is moving");
         // $("#sect").toggleClass("body_color_change");
