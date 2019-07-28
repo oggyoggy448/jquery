@@ -3,26 +3,37 @@ $("document").ready(anim_start);
 function anim_start(){
 
     $("#show").click(function(){
+        //show method is used to show the hidden element 
+
         // $("div:first").show();
         // $("div:first").show("slow");
         // $("div:first").show("fast");
         // $("div:first").show(1000);
         // $("div:first").show(10000);
-        // $("div:first").show(1000,"swing");
+        // $("div:first").show(1000,"swing"); //swing parameter is used to apply animation opposite to linear
         $("div:first").show(1000,"linear");
     });
 
     $("#hide").on("click",function(){
+
+        //hide method is used to hide the elment that is currenting showing
+
         // $("div:first").hide();
         // $("div:first").hide("fast");
         // $("div:first").hide("slow");
         // $("div:first").hide(2000);
         // $("div:first").hide(1000);
         $("div:first").hide(1000,"linear");
-        // $("div:first").hide(1000,"swing");
+        // $("div:first").hide(1000,"swing"); 
     });
 
+    //document................ line belongs to javascript 
     document.getElementById("toggle").onclick = function(){
+        //toggle method is used to apply one of two action 
+        // if the element is showing on the page 
+        // it will hide that element and if it is hidden 
+        // it will show that element on the web page
+        
         // $("div:first").toggle();
         // $("div:first").toggle("fast");
         // $("div:first").toggle("slow");
@@ -30,6 +41,9 @@ function anim_start(){
         // $("div:first").toggle(1000);
         // $("div:first").toggle(1000,"linear");
         // $("div:first").toggle(1000,"swing");
+
+
+        //anomonous function is basically used to get the success method
         $("div:first").toggle(1000,function(){
             $(this).text("animation is done");
         });
@@ -40,7 +54,11 @@ function anim_start(){
 
     $("#fade_in").click(
     function(){
+        //fadeIn applies the animation. it will be applied when the element is already fadeOut
+        
+        
         // console.log("event is working");
+
         // $("#box").fadeIn();
         // $("div:nth-child(1)").fadeIn(2000);
         //  $("div:nth-child(1)").fadeIn("slow");
@@ -51,6 +69,8 @@ function anim_start(){
     });
 
     $("#fade_out").on("click",function(){
+        // fadeOut method is used to hidden the element if it is showing on page
+
         // $("#box").fadeOut();
         // $("div:last").prev().fadeOut("slow");
         // $("div:last").prev().fadeOut("fast");
@@ -61,6 +81,9 @@ function anim_start(){
 
 
     document.querySelector("#fade_to").addEventListener("click",function(){
+        // fadeTo method is used fade the element. first parameter is time in mili-second 
+        // second parameter is basically opacity value
+
         // console.log("event is working");
         // $("div:first").fadeTo(200,0.3);
         // $("div:first").fadeTo(100,0.2);
@@ -68,6 +91,9 @@ function anim_start(){
     });
 
     document.querySelector("#combination_anim").onclick = function(){
+        
+
+
         // console.log("it's working");
         $("#box").fadeOut(1000)
         .fadeIn(1000).fadeTo(2000,0.3)
