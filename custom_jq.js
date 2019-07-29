@@ -10,25 +10,33 @@ $(function(){
     
     // by attributes
     // $("p[id=m-name]").text("changed");
-    // $("p[id^=m]").text("changed");
-    // $("p[id*=m]").text("changed");
+    // $("p[id^=m]").text("changed"); //select the element whose attr value start with m
+    // $("p[id*=m]").text("changed"); //select the element whose attr value has m character
 
 
     //select the direct child elements
     // $("header").children().attr("style","color:red");
+
     //select the element by finding a element inside header
     // $("header").find("#heading").css("text-transform","uppercase");
+    
+    //return all the values 
     // $("header").find("*").css("text-transform","uppercase");
 
     // $("#heading").parent().attr("style","background-color:red");
+    // $("#heading").parents().attr("style","background-color:red");
     // $("#heading1").parentsUntil("body").attr({style: "background-color:red"});
 
     // $("#hea4ding").prev().attr("style","color:red");
     // $("#hea4ding").prevAll().attr("style","color:red");
+    
+        // it will select all element excluding the element which has class name heading
     //   $("#hea4ding").prevUntil(".heading").attr("style","color:red");
 
     //    $("#hea4ding").next().attr("style","color:red");
     // $("#hea4ding").nextAll().attr("style","color:red");
+
+    // nextUntil    property selects all the element excluding the element which has class name heading
     //   $("#hea4ding").nextUntil(".heading").attr("style","color:red");
 
 
@@ -57,7 +65,10 @@ $(function(){
     //     console.log("it's working");
     // });
 
+
+    //it select all the element and apply the property written inside
     // $("p").each(function(){
+        //$(this) refers to current selected element by each function
     //     $(this).text("updated");
     // });
 
@@ -79,6 +90,8 @@ $(function(){
         // });
     // });
 
+
+    //evt class properties
     // $("#m-name").click(function(evt){
     //     // console.log("page location is: "+evt.pageX +"/"+evt.pageY);
     //     console.log("which event is execuated: "+evt.which);
@@ -185,6 +198,8 @@ $(function(){
     //     $(this).off("click");
     // });
 
+
+
     // $("form").on("mouseenter mouseleave","select:first",function(){
     //     console.log("done mouseenter|mouseleave");
     //     $(this).off("mouseenter");
@@ -267,23 +282,41 @@ $(function(){
 
 
 
+    // add new element after the content of selected element. observe the result from the developer tool at browser 
     // $("#s_text").append("<div> this data will come after the main text</div>");
+
+    // add new element before the content of selected element observe the developer tool
     // $("#s_text").prepend("<div>this data will come before the main text</div>");
+
+    // prependTo works same as prepend. only differnce is syntax 
     // $("<div> this data will come also before the main tag </div>").prependTo($("#s_text"));
+
+    // appendTo works same like append. Ony syntax differnce
     // $("<div> this data will come also after the main tag </div>").appendTo($("#s_text"));
 
 
+    //before and insertBefore works same only difference is syntax differnce. for accurate result 
+    // observe the developer tool at browser
     // $("#s_text").before("<h1>header</h1><hr>");
     // $("<h2> header2 </h2> <hr> ").insertBefore("#s_text");
     
+    // after and inserAfter work same only syntax diff. 
+    // observe the developer tool for better result
     // $("#s_text").after("<h1>footer01</h1><hr>");
     // $("<h2> footer02 </h2> <hr>").insertAfter("#s_text");
 
-    // $(".s_text").wrap("<section> </section>");
-    // $(".s_text").wrapAll("<section> </section>");
-    // $(".s_text").wrapInner   ("<section> </section>");
 
+
+    // wrap method add the parent element for selected element. parent element is mentioned in wrap method 
+    // as a parameter
+
+    // $(".s_text").wrap("<section> </section>");
+    // $(".s_text").wrapAll("<section> </section>"); // put the parent element around all the selected element
+    // $(".s_text").wrapInner   ("<section> </section>"); // put the parent element inside the selected element
+
+    //animation using toggle hide and show method
     // $("#animation").click(function(){
+        //toggle hide the elem if it is showing otherwise show the elem when it is hiding
     //     // $('p'). toggle(4000,"swing");
     //     // $('p'). toggle("fast","swing");
     //     $('p').hide("slow","swing");
@@ -294,6 +327,7 @@ $(function(){
     // $('p').show(750);
 
     // $("#animation").click(function(){
+        //fadeToggle , fadeIn and fadeOut , fadeTo are animation property
     //     // $('p'). fadeToggle(4000,"swing");
     //     // $('p'). fadeToggle("fast","swing");
     //     $('p').fadeIn("slow","linear");
@@ -307,7 +341,9 @@ $(function(){
     //     $('p').slideDown(5000,"swing",function(){alert("animation applied");});
     // });
 
+    // replace the selected element with the mentioned element
     // $("p:first").replaceWith("<section style='color: blue;'> Updated value </section>");
+    // replaceAll works same like replace
     // $("<section> update value </section>").replaceAll("p:first");
 
     //remote the whole tag 
